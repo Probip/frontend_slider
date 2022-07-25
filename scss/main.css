@@ -1,0 +1,136 @@
+#overflow {
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  grid-column-end: 9;
+}
+#overflow #carouselContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: right;
+  flex-direction: row;
+}
+#overflow #carouselContainer1 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: right;
+  flex-direction: row-reverse;
+  right: 160px;
+  grid-row: 2;
+}
+#overflow img {
+  height: 200px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.arrow {
+  padding-left: 100px;
+  padding-top: 5px;
+  align-self: end;
+  grid-column-end: 9;
+  height: 205px;
+  background-color: #ffffff;
+}
+.arrow_left, .arrow_right {
+  background-color: #ffffff;
+  border: #DDDDDD 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.arrow_left:hover, .arrow_right:hover {
+  border: #134880 1px solid;
+  transition: 0.7s;
+}
+
+@font-face {
+  font-family: "Helvetica Neu";
+  src: url(../Helvetica_Neu_Bold.ttf);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 100px auto 100px;
+  row-gap: 60px;
+  width: 940px;
+  height: 730px;
+  margin: 0 auto;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.element {
+  background-color: #DDDDDD;
+  color: #ffffff;
+  border-radius: 0 0 5px 5px;
+}
+.element_1 {
+  grid-column: 1/span 4;
+}
+.element_2 {
+  display: grid;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  grid-column: span 8;
+  grid-template-columns: 10% auto;
+}
+.element_3 {
+  display: grid;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  border-radius: 5px 5px 0 0;
+  grid-column: 1/-1;
+  grid-template-columns: 60;
+}
+.element_text {
+  font-family: "Helvetica Neu";
+  font-size: 15px;
+  grid-column: 2/-1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sidebar-text {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-family: "Source Sans Pro", sans-serif;
+  grid-column: 9/span 4;
+}
+.sidebar-text h1 {
+  color: #134880;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.2px;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+.sidebar-text p {
+  color: #484A4C;
+  font-size: 18px;
+  line-height: 26px;
+}/*# sourceMappingURL=main.css.map */

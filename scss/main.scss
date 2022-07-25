@@ -1,0 +1,87 @@
+@import './variables.scss';
+@import './carousel.scss';
+@import './arrow.scss';
+
+@font-face {
+    font-family: "Helvetica Neu";
+    src: url(../Helvetica_Neu_Bold.ttf);
+}
+@mixin flexCenterStart {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+}
+@mixin gridElementWithText {
+    display: grid;
+    column-gap: 20px;  
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.container{
+    display: grid;
+    grid-template-rows: 100px auto 100px;
+    row-gap: 60px;
+    width: 940px;
+    height: 730px;
+    margin: 0 auto;
+}
+.row{
+    display: grid;
+    grid-template-columns: repeat($grid-columns,1fr);
+    column-gap: 20px;   
+}
+.element{
+    background-color: $element-background;
+    color: $light-text;
+    border-radius: 0 0 5px 5px;
+    &_1{
+        grid-column:1 / span 4;
+    }
+    &_2{
+       @include gridElementWithText();
+        grid-column:span 8;
+        grid-template-columns: calc(100%/10) auto; //ili 60px auto
+    }
+    &_3{
+        @include gridElementWithText();
+        border-radius: 5px 5px 0 0;
+        grid-column: 1/-1;
+        grid-template-columns: calc(720/12);//60px
+    }
+    &_text{
+        font-family: 'Helvetica Neu';
+        font-size: 15px;
+        grid-column: 2/-1;
+        @include flexCenterStart();
+    }  
+}
+
+
+.sidebar-text{
+    position: absolute;
+    @include flexCenterStart();
+    flex-direction: column;
+    font-family: 'Source Sans Pro', sans-serif;
+    grid-column: 9/span 4;
+    h1{
+        color: $main-color;
+        font-weight: 700;
+        line-height: 100%;
+        letter-spacing: -0.2px;
+        margin-bottom: 30px;
+        font-size: 32px;
+    }
+    p{
+        color: $dark-text;
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+

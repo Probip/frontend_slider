@@ -1,0 +1,27 @@
+@mixin flexRightNowrap {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: right;  
+}
+#overflow{
+    overflow: hidden;
+    position:absolute;
+    right: 0;
+    grid-column-end: 9;
+    #carouselContainer{
+        @include flexRightNowrap();
+        flex-direction: row;
+    }
+    #carouselContainer1{
+        @include flexRightNowrap(); 
+        flex-direction: row-reverse;
+        right: 160px;
+        grid-row: 2;
+    }
+    img{
+        height: 200px;
+        border-radius: 5px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+}

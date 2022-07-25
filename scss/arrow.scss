@@ -1,0 +1,28 @@
+@import './variables.scss';
+@mixin flexCenterCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.arrow{
+    padding-left: 100px;
+    padding-top: 5px;
+    align-self:end;
+    grid-column-end: 9;
+    height: 205px;
+    background-color: $white;
+    &_left,&_right{
+        background-color: $white;
+        border: $element-background 1px solid;
+       @include flexCenterCenter();
+        height: 60px;
+        width: 60px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        &:hover{
+            border: $main-color 1px solid;
+            transition: 0.7s; 
+            //content: url('../img/arrow-blue-left.png');
+        } 
+    }
+}

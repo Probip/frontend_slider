@@ -1,0 +1,23 @@
+.arrow {
+  padding-left: 100px;
+  padding-top: 5px;
+  align-self: end;
+  grid-column-end: 9;
+  height: 205px;
+  background-color: #ffffff;
+}
+.arrow_left, .arrow_right {
+  background-color: #ffffff;
+  border: #DDDDDD 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.arrow_left:hover, .arrow_right:hover {
+  border: #134880 1px solid;
+  transition: 0.7s;
+}/*# sourceMappingURL=arrow.css.map */
