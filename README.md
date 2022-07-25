@@ -1,2 +1,2 @@
-# factory
+# slider jQuery
  
